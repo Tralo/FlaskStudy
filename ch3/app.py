@@ -16,3 +16,6 @@ movies = [
 @app.route('/')
 def index():
     return render_template('index.html', name=name,movies=movies)
+
+
+
