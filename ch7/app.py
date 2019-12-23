@@ -199,7 +199,7 @@ def edit(movie_id):
         movie.title = title
         movie.year = year
         db.session.commit()
-        flash('Item Edited.')
+        flash('Edit item')
         return redirect(url_for('index'))
     return render_template('edit.html', movie=movie)
 
@@ -212,7 +212,7 @@ def delete(movie_id):
     movie = Movie.query.get_or_404(movie_id)
     db.session.delete(movie)
     db.session.commit()
-    flash('Item Deleted.')
+    flash('Item deleted.')
     return redirect(url_for('index'))
 
 
